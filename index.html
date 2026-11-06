@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kimberly Sayles — mathematics student with experience in customer service, training, reception, and administrative support.">
+  <meta name="author" content="Kimberly Sayles">
+  <meta name="theme-color" content="#263b78">
+
+  <title>Kimberly Sayles | Mathematics & Professional Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #f6f7fc;
+      --surface: #ffffff;
+      --text: #20243a;
+      --muted: #626981;
+      --primary: #3656a8;
+      --primary-dark: #263b78;
+      --secondary: #7653b8;
+      --accent: #e9e8fa;
+      --border: #e0e2ef;
+      --nav-bg: rgba(246, 247, 252, .94);
+      --shadow: 0 12px 35px rgba(38, 59, 120, .09);
+      --max-width: 1120px;
+      --radius: 18px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #111629;
+      --surface: #1a2139;
+      --text: #f0f1fa;
+      --muted: #b4bad0;
+      --primary: #9bb4ff;
+      --primary-dark: #c1ceff;
+      --secondary: #c1a2ff;
+      --accent: #292b50;
+      --border: #343b5a;
+      --nav-bg: rgba(17, 22, 41, .94);
+      --shadow: 0 12px 35px rgba(0, 0, 0, .22);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.7;
+      transition: background .2s, color .2s;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--secondary);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--secondary);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max-width), 90%);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .eyebrow {
+      color: var(--secondary);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.2;
+      letter-spacing: -.03em;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 7vw, 5.2rem);
+      margin: 16px 0;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin: 10px 0;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .section-intro {
+      max-width: 690px;
+      font-size: 1.04rem;
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--nav-bg);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-weight: 850;
+      font-size: 1.05rem;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: .88rem;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 9px;
+      align-items: center;
+    }
+
+    .icon-button,
+    .menu-toggle {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 9px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .menu-toggle {
+      display: none;
+    }
+
+    /* BUTTONS */
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 19px;
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+      font-weight: 750;
+      font-size: .93rem;
+      transition: transform .2s, background .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+      color: #fff;
+    }
+
+    .button-secondary {
+      color: var(--primary);
+      background: transparent;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 105px 0 95px;
+      background:
+        radial-gradient(
+          ellipse at 85% 10%,
+          rgba(118, 83, 184, .16),
+          transparent 42%
+        ),
+        radial-gradient(
+          ellipse at 5% 85%,
+          rgba(54, 86, 168, .10),
+          transparent 38%
+        );
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .8fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(
+        100deg,
+        var(--primary),
+        var(--secondary)
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-description {
+      max-width: 670px;
+      font-size: 1.12rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .hero-note {
+      margin-top: 25px;
+      font-size: .9rem;
+    }
+
+    .hero-card {
+      padding: 30px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .monogram {
+      width: 112px;
+      height: 112px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      color: white;
+      font-size: 2.1rem;
+      font-weight: 850;
+      letter-spacing: -.06em;
+      background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+      );
+      box-shadow: 0 10px 25px rgba(84, 76, 166, .24);
+    }
+
+    .hero-card-label {
+      color: var(--secondary);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .hero-card h2 {
+      font-size: 1.55rem;
+    }
+
+    .focus-list {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 0;
+    }
+
+    .focus-list li {
+      border-top: 1px solid var(--border);
+      padding: 11px 0;
+      font-weight: 650;
+      font-size: .93rem;
+    }
+
+    .focus-list li::before {
+      content: "✦";
+      color: var(--secondary);
+      margin-right: 10px;
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      font-size: 1.02rem;
+    }
+
+    .principle {
+      background: var(--accent);
+      border-radius: var(--radius);
+      padding: 29px;
+    }
+
+    .principle blockquote {
+      margin: 12px 0;
+      font-size: 1.35rem;
+      line-height: 1.5;
+      font-weight: 750;
+    }
+
+    .principle p {
+      font-size: .92rem;
+    }
+
+    /* EXPERIENCE AND CARDS */
+
+    .alternate-section {
+      background: var(--surface);
+      border-block: 1px solid var(--border);
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 21px;
+    }
+
+    .card {
+      padding: 25px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .card-number {
+      color: var(--secondary);
+      font-weight: 850;
+      font-size: .78rem;
+      letter-spacing: .1em;
+    }
+
+    .card h3 {
+      margin: 12px 0 7px;
+    }
+
+    .card p {
+      font-size: .94rem;
+    }
+
+    .card-link {
+      margin-top: auto;
+      padding-top: 10px;
+      font-weight: 750;
+      font-size: .92rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 12px 0 18px;
+    }
+
+    .tag {
+      background: var(--accent);
+      color: var(--text);
+      border-radius: 7px;
+      padding: 4px 9px;
+      font-size: .76rem;
+      font-weight: 700;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      max-width: 850px;
+      border-left: 2px solid var(--border);
+      margin-left: 8px;
+      padding-left: 30px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 31px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -37px;
+      top: 7px;
+      width: 12px;
+      height: 12px;
+      background: var(--secondary);
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+    }
+
+    .timeline-date {
+      color: var(--secondary);
+      font-size: .81rem;
+      font-weight: 850;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .timeline-item h3 {
+      margin: 6px 0;
+    }
+
+    .timeline-item p {
+      margin-top: 8px;
+    }
+
+    /* EDUCATION AND SKILLS */
+
+    .education-grid,
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .info-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .info-panel h3 {
+      margin-top: 0;
+    }
+
+    .info-panel p {
+      margin-bottom: 0;
+    }
+
+    /* CONTACT */
+
+    .contact-panel {
+      background: linear-gradient(
+        130deg,
+        var(--accent),
+        rgba(118, 83, 184, .13)
+      );
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: clamp(30px, 6vw, 62px);
+      text-align: center;
+    }
+
+    .contact-panel p {
+      max-width: 620px;
+      margin: 15px auto 25px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+    }
+
+    .contact-links a {
+      font-weight: 750;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 28px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: .85rem;
+    }
+
+    .back-to-top {
+      font-weight: 750;
+    }
+
+    /* RESPONSIVE DESIGN */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .hero {
+        padding-top: 78px;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: .81rem;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 62px 0;
+      }
+
+      .nav-inner {
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 10px 0;
+        font-size: .95rem;
+      }
+
+      .hero {
+        padding: 62px 0;
+      }
+
+      .about-grid,
+      .card-grid,
+      .skills-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-buttons .button {
+        width: 100%;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+
+      <a class="brand" href="#home">
+        Kimberly Sayles.
+      </a>
+
+      <div class="nav-actions">
+
+        <button
+          class="icon-button"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch color theme"
+          title="Switch color theme">
+          ☾
+        </button>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links">
+          Menu ☰
+        </button>
+
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Mathematics · Customer Experience · Administrative Support
+          </div>
+
+          <h1>
+            Curious by nature.
+            <span>Committed to growth.</span>
+          </h1>
+
+          <p class="hero-description">
+            I am Kimberly Sayles, a mathematics student at Cal Poly Humboldt
+            with professional experience in customer service, team training,
+            front desk operations, and accurate data entry. I bring a thoughtful,
+            detail-oriented approach to learning, collaboration, and problem-solving.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a class="button button-primary" href="#experience">
+              Explore My Experience →
+            </a>
+
+            <a class="button button-secondary" href="#contact">
+              Get in Touch ↗
+            </a>
+
+          </div>
+
+          <p class="hero-note">
+            Arcata, California · Authorized to work in the United States
+          </p>
+
+        </div>
+
+        <aside class="hero-card" aria-label="Profile summary">
+
+          <div class="monogram" aria-hidden="true">
+            KS
+          </div>
+
+          <div class="hero-card-label">
+            Professional strengths
+          </div>
+
+          <h2>
+            People-focused. Organized. Adaptable.
+          </h2>
+
+          <ul class="focus-list">
+            <li>Customer service and communication</li>
+            <li>Training and peer mentorship</li>
+            <li>Data entry and record organization</li>
+            <li>Time management and teamwork</li>
+          </ul>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">About me</div>
+          <h2>
+            Combining analytical thinking with a people-first approach.
+          </h2>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-copy">
+
+            <p>
+              I am currently pursuing a bachelor's degree in Mathematics
+              at Cal Poly Humboldt. My academic path has strengthened my
+              analytical thinking, persistence, and willingness to approach
+              challenges from different perspectives.
+            </p>
+
+            <p>
+              My professional background includes front desk reception,
+              data entry, retail operations, and barista training.
+              Across these roles, I have developed the ability to communicate
+              clearly, stay organized in fast-paced environments, support
+              coworkers, and provide welcoming customer experiences.
+            </p>
+
+            <p>
+              I value opportunities to continue learning, contribute to a
+              collaborative team, and apply both interpersonal and
+              problem-solving skills in a professional setting.
+            </p>
+
+          </div>
+
+          <div class="principle">
+
+            <div class="eyebrow">
+              My approach
+            </div>
+
+            <blockquote>
+              "Strong work is built through curiosity, consistency, and care."
+            </blockquote>
+
+            <p>
+              I aim to bring attention to detail, patience, and a positive
+              attitude to every responsibility—whether supporting a customer,
+              training a teammate, or working through a challenging problem.
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section class="section alternate-section" id="experience">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Professional experience</div>
+          <h2>
+            Experience built around service, accuracy, and teamwork.
+          </h2>
+
+          <p class="section-intro">
+            A range of roles developing administrative, communication,
+            training, and operational skills.
+          </p>
+        </div>
+
+        <div class="timeline">
+
+          <!-- EXPERIENCE 1 -->
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              February 2024 – May 2024 · Beaumont, California
+            </div>
+
+            <h3>
+              Front Desk Receptionist | Your Income Tax Service Ladies
+            </h3>
+
+            <p>
+              Supported front desk operations by welcoming guests,
+              managing incoming calls, providing information about
+              services and procedures, and maintaining organized records.
+              Entered and verified information in the company database,
+              helped resolve missing or inconsistent data, and prioritized
+              assigned work to meet deadlines.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Data Entry</span>
+              <span class="tag">Database Accuracy</span>
+              <span class="tag">Reception</span>
+              <span class="tag">Organization</span>
+            </div>
+
+          </article>
+
+          <!-- EXPERIENCE 2 -->
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              September 2021 – November 2023 · Torrance, California
+            </div>
+
+            <h3>
+              Barista Trainer | Starbucks
+            </h3>
+
+            <p>
+              Trained and mentored a team of four baristas, supporting
+              consistent beverage preparation and customer service.
+              Adapted training materials and instruction to individual
+              learning needs, monitored progress, and encouraged open
+              communication in a supportive learning environment.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Training</span>
+              <span class="tag">Mentorship</span>
+              <span class="tag">Communication</span>
+              <span class="tag">Team Development</span>
+            </div>
+
+          </article>
+
+          <!-- EXPERIENCE 3 -->
+          <article class="timeline-item">
+
+            <div class="timeline-date">
+              January 2016 – November 2023 · Torrance, California
+            </div>
+
+            <h3>
+              Barista / Cashier | Starbucks
+            </h3>
+
+            <p>
+              Delivered customer service, processed cash-register
+              transactions, assisted customers with product selection,
+              and maintained clean and organized work areas.
+              Monitored and replenished inventory, followed recurring
+              cleanliness and sanitation training, and maintained
+              attention to detail during daily operations.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Customer Service</span>
+              <span class="tag">Cash Handling</span>
+              <span class="tag">Inventory</span>
+              <span class="tag">Food Safety</span>
+            </div>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Education</div>
+          <h2>
+            Academic foundation in mathematics.
+          </h2>
+        </div>
+
+        <div class="education-grid">
+
+          <article class="info-panel">
+
+            <div class="card-number">
+              JULY 2025 – PRESENT
+            </div>
+
+            <h3>
+              Bachelor's Degree in Mathematics
+            </h3>
+
+            <p>
+              Cal Poly Humboldt · Arcata, California
+            </p>
+
+          </article>
+
+          <article class="info-panel">
+
+            <div class="card-number">
+              AUGUST 2013 – DECEMBER 2024
+            </div>
+
+            <h3>
+              Associate's Degree in Mathematics
+            </h3>
+
+            <p>
+              El Camino Community College District · Torrance, California
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section alternate-section" id="skills">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Skills</div>
+          <h2>
+            Capabilities I bring to a team.
+          </h2>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="info-panel">
+
+            <h3>
+              Communication & Collaboration
+            </h3>
+
+            <div class="tags">
+              <span class="tag">Communication</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Customer Relations</span>
+              <span class="tag">Mentoring</span>
+            </div>
+
+            <p>
+              Building positive interactions with customers, coworkers,
+              and trainees.
+            </p>
+
+          </article>
+
+          <article class="info-panel">
+
+            <h3>
+              Organization & Administration
+            </h3>
+
+            <div class="tags">
+              <span class="tag">Data Entry</span>
+              <span class="tag">Record Keeping</span>
+              <span class="tag">Attention to Detail</span>
+              <span class="tag">Time Management</span>
+            </div>
+
+            <p>
+              Maintaining accurate information, organized records,
+              and dependable workflows.
+            </p>
+
+          </article>
+
+          <article class="info-panel">
+
+            <h3>
+              Service & Operations
+            </h3>
+
+            <div class="tags">
+              <span class="tag">Barista Experience</span>
+              <span class="tag">Cash Handling</span>
+              <span class="tag">Inventory</span>
+              <span class="tag">Sanitation</span>
+            </div>
+
+            <p>
+              Supporting daily operations while maintaining service
+              and cleanliness standards.
+            </p>
+
+          </article>
+
+          <article class="info-panel">
+
+            <h3>
+              Analytical Development
+            </h3>
+
+            <div class="tags">
+              <span class="tag">Mathematics</span>
+              <span class="tag">Problem-Solving</span>
+              <span class="tag">Learning Agility</span>
+            </div>
+
+            <p>
+              Applying a developing mathematical foundation to
+              structured thinking and problem-solving.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PERSONAL INTERESTS -->
+    <section class="section" id="interests">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="eyebrow">Beyond the classroom</div>
+          <h2>
+            Interests that keep me creative and active.
+          </h2>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+
+            <div class="card-number">
+              CREATIVE INTEREST
+            </div>
+
+            <h3>
+              Crochet
+            </h3>
+
+            <p>
+              I enjoy crocheting baby blankets for family members,
+              combining creativity, patience, and attention to detail
+              in a hands-on project.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="card-number">
+              WINTER ACTIVITY
+            </div>
+
+            <h3>
+              Skiing
+            </h3>
+
+            <p>
+              During the winter months, I enjoy skiing and spending
+              time outdoors.
+            </p>
+
+          </article>
+
+          <article class="card">
+
+            <div class="card-number">
+              SUMMER ACTIVITY
+            </div>
+
+            <h3>
+              Hiking
+            </h3>
+
+            <p>
+              In the summer, I enjoy hiking and exploring the outdoors.
+            </p>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section alternate-section" id="contact">
+      <div class="container">
+
+        <div class="contact-panel">
+
+          <div class="eyebrow">
+            Get in touch
+          </div>
+
+          <h2>
+            Let's connect.
+          </h2>
+
+          <p>
+            For professional opportunities, questions, or conversation,
+            please feel free to reach out by email or phone.
+          </p>
+
+          <div class="contact-links">
+
+            <a href="mailto:kimberly_sayles13@yahoo.com">
+              Email Kimberly ↗
+            </a>
+
+            <a href="tel:+13103873753">
+              Call: (310) 387-3753 ↗
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year"></span> Kimberly Sayles.
+        Built with HTML, CSS & JavaScript.
+      </p>
+
+      <a class="back-to-top" href="#home">
+        Back to top ↑
+      </a>
+
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Mobile navigation.
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(isOpen)
+      );
+
+      menuToggle.textContent = isOpen ? "Close ×" : "Menu ☰";
+
+    });
+
+    // Close mobile navigation after selecting a section.
+    navLinks.querySelectorAll("a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+        menuToggle.textContent = "Menu ☰";
+
+      });
+
+    });
+
+    // Light/dark theme toggle.
+    const themeToggle = document.getElementById("theme-toggle");
+
+    themeToggle.addEventListener("click", () => {
+
+      const isDark =
+        document.documentElement.getAttribute("data-theme") === "dark";
+
+      document.documentElement.setAttribute(
+        "data-theme",
+        isDark ? "light" : "dark"
+      );
+
+      themeToggle.textContent = isDark ? "☾" : "☀";
+
+      themeToggle.setAttribute(
+        "aria-label",
+        isDark ? "Switch to dark theme" : "Switch to light theme"
+      );
+
+    });
+
+  </script>
+
+</body>
+</html>
